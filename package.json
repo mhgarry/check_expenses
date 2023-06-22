@@ -1,0 +1,8 @@
+{
+  "name": "check_expenses",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mhgarry/check_expenses.git",
+  "author": "Matt <mhgarry92@gmail.com>",
+  "license": "MIT"
+}
