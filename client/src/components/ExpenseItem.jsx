@@ -1,10 +1,15 @@
-const ExpenseItem = () => {
+import "./ExpenseItem.css";
+
+const ExpenseItem = (props) => {
 	return (
-		<div>
-			<h2>Expense Item!</h2>
-			<p>This is also visible!</p>
+		<div className='expense-item'>
+			<div>{props.expense.date.toISOString()}</div>
+			<div className='expense-item__description'>
+				<h2>{props.expense.title}</h2>
+				<div className='expense-item__price'>${props.expense.amount}</div>
+			</div>
 		</div>
 	);
 };
-
+// to iso string built in js method to convert date to string
 export default ExpenseItem;

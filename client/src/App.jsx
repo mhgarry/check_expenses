@@ -6,10 +6,35 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
+	const expenses = [
+		{
+			id: "e1",
+			title: "Toilet Paper",
+			amount: 94.12,
+			date: new Date(2020, 7, 14),
+		},
+		{ id: "e2", title: "New TV", amount: 799.49, date: new Date(2021, 2, 12) },
+		{
+			id: "e3",
+			title: "Car Insurance",
+			amount: 294.67,
+			date: new Date(2021, 2, 28),
+		},
+		{
+			id: "e4",
+			title: "New Desk (Wooden)",
+			amount: 450,
+			date: new Date(2021, 5, 12),
+		},
+	];
+
 	return (
 		<div>
-			<h1>Hello World!</h1>
-			<ExpenseItem />
+			<h2>Let&apos;s get started!</h2>
+			<ExpenseItem expense={expenses[0]}></ExpenseItem>
+			<ExpenseItem expense={expenses[1]}></ExpenseItem>
+			<ExpenseItem expense={expenses[2]}></ExpenseItem>
+			<ExpenseItem expense={expenses[3]}></ExpenseItem>
 		</div>
 	);
 } // react code is declarative programming, it is not imperative programming, it is not js code, it is jsx code, it is not html code, it is jsx code, it is not css code, it is jsx code. The nature of declartive programming lets react build user interfaces that are more predictable and easier to debug and that take less time to develop.
