@@ -1,4 +1,4 @@
-import ExpenseDisplay from "./components/ExpenseDisplay";
+import ExpenseDisplay from "./components/Expenses/ExpenseDisplay";
 function App() {
 	const expenses = [
 		{
@@ -26,6 +26,12 @@ function App() {
 			date: new Date(2018, 5, 12),
 		},
 	];
+	// return React.createElement(
+	// 	"div",
+	// 	{},
+	// 	React.createElement("h2", {}, "Let's get started!"),
+	// 	React.createElement(ExpenseDisplay, { expense: expenses })
+	// ); // This is the same as the JSX below
 	return (
 		<div>
 			<h2>Let&apos;s get started!</h2>

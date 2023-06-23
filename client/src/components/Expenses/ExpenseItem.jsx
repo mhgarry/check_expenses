@@ -1,6 +1,7 @@
-import Card from "../components/Card";
+import Card from "../Card/Card";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
+
 const ExpenseItem = (props) => {
 	return (
 		<Card className='expense-item'>
