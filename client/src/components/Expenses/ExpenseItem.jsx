@@ -9,11 +9,11 @@ const ExpenseItem = (props) => {
 	// 1st element is the current state
 	// 2nd element is a function that allows us to update the state
 	// use state returns current value and a function to assign to a new value
-
+	// each component has its own state
 
 	const [title, setTitle] = useState(props.expense.title);
 	const changeTitle = () => {
-		setTitle("Updated!");
+		setTitle('Updated!');
 		console.log(title);
 	};
 
@@ -25,6 +25,7 @@ const ExpenseItem = (props) => {
 				<div className='expense-item__price'>${props.expense.amount}</div>
 			</div>
 			<button onClick={changeTitle}>Change Title</button>
+			{console.log(title)}
 		</Card>
 	);
 };
