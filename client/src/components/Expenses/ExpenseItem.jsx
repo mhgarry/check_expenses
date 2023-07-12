@@ -12,6 +12,7 @@ const ExpenseItem = (props) => {
 	// each component has its own state
 
 	const [title, setTitle] = useState(props.expense.title);
+
 	const changeTitle = () => {
 		setTitle('Updated!');
 		console.log(title);
