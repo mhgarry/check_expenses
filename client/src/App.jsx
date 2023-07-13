@@ -28,6 +28,11 @@ function App() {
 			date: new Date(2018, 5, 12),
 		},
 	];
+
+	const addExpenseHandler = (expenses) => {
+		console.log('in app.js');
+		console.log(expenses);
+	}
 	// return React.createElement(
 	// 	"div",
 	// 	{},
@@ -36,10 +41,10 @@ function App() {
 	// ); // This is the same as the JSX below
 	return (
 		<div>
-			<NewExpense />
+			<NewExpense onAddExpense={addExpenseHandler} />
 			<ExpenseDisplay expense={expenses} />
 		</div>
 	);
-}
+};
 
 export default App;

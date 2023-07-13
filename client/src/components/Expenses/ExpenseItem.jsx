@@ -15,7 +15,6 @@ const ExpenseItem = (props) => {
 
 	const changeTitle = () => {
 		setTitle('Updated!');
-		console.log(title);
 	};
 
 	return (
@@ -26,7 +25,6 @@ const ExpenseItem = (props) => {
 				<div className='expense-item__price'>${props.expense.amount}</div>
 			</div>
 			<button onClick={changeTitle}>Change Title</button>
-			{console.log(title)}
 		</Card>
 	);
 };
