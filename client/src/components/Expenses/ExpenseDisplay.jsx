@@ -9,11 +9,13 @@ const ExpenseDisplay = (props) => {
 
 	const filterChangeHandler = selectedYear => {
 		setFilteredYear(selectedYear);
-	}
+	};
+
 	return (
 		<div>
 			<Card className='expenses'>
 				<ExpenseFilter onChangeFilter={filterChangeHandler} selected={filteredYear} />
+				<p>Data for years {filterInfoText} is hidden.</p>
 				{props.expense.map((expense) => (
 					<ExpenseItem key={expense.id} expense={expense} />
 				))}
