@@ -1,30 +1,19 @@
-import Card from "../Card/Card";
-import ExpenseDate from "./ExpenseDate";
-import "./ExpenseItem.css";
-import React, { useState } from "react";
+import React from 'react';
+
+import ExpenseDate from './ExpenseDate';
+import Card from '../UI/Card';
+import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
-	// useState(); // updates the state of a component to show different data on the screen. Must be called inside of component functions nor nested functions
-	// useState() returns an array with exactly 2 elements
-	// 1st element is the current state
-	// 2nd element is a function that allows us to update the state
-	// use state returns current value and a function to assign to a new value
-	// each component has its own state
-
-	const [title, setTitle] = useState(props.expense.title);
-
-
-
 	return (
-
 		<Card className='expense-item'>
-			<ExpenseDate expense={props.expense} />
+			<ExpenseDate date={props.date} />
 			<div className='expense-item__description'>
-				<h2>{title}</h2>
-				<div className='expense-item__price'>${props.expense.amount}</div>
+				<h2>{props.title}</h2>
+				<div className='expense-item__price'>${props.amount}</div>
 			</div>
 		</Card>
 	);
-};
+}
 
 export default ExpenseItem;
